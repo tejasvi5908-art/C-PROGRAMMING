@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main(void) {
+    float mileage;
+    int petrolLitres, distance;
+    float possibleDistance;
+    printf("Enter mileage: ");
+    if (scanf("%f", &mileage) != 1) return 1;
+    printf("Enter petrol available (litres): ");
+    if (scanf("%d", &petrolLitres) != 1) return 1;
+    printf("Enter distance to travel: ");
+    if (scanf("%d", &distance) != 1) return 1;
+    possibleDistance = mileage * petrolLitres;
+    if (mileage >= 0 && petrolLitres >= 0 && distance >= 0 &&
+        possibleDistance >= distance) {
+        printf("Can reach\n");
+    } else {
+        printf("Cannot reach\n");
+    }
+    return 0;
+}
+
+*/**SAMPLE INPUT:**
+
+11
+
+6
+
+67
+
+**SAMPLE OUTPUT:**
+
+Cannot reach
+*/
